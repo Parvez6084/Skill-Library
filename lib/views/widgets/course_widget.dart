@@ -15,7 +15,7 @@ class CourseCard extends GetView {
   @override
   Widget build(BuildContext context) {
 
-    var url = "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
+    var url = "https://picsum.photos/200";
     return Container(
       margin: const EdgeInsets.all(8),
       width: 320,

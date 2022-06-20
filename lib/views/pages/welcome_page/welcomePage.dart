@@ -9,9 +9,9 @@ import '../../../consts/app_fonts.dart';
 import '../../../consts/app_images.dart';
 
 class WelcomePage extends GetView<WelcomePageController> {
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: SafeArea(
         child: Stack(

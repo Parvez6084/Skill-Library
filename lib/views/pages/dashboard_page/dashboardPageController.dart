@@ -15,5 +15,4 @@ class DashBoardPageController extends GetxController {
     currentIndex.value = index;
   }
 
-
 }

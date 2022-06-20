@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skill_library/views/pages/search_page/searchPageController.dart';
 
-import '../../../consts/app_fonts.dart';
-
 class ScanPage extends GetView<ScanPageController> {
   @override
   Widget build(BuildContext context) {

@@ -14,13 +14,19 @@ class HomePage extends GetView<HomePageController> {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Obx((){return Column(
+          child: Obx((){
+            return controller.isLoad.isTrue ? SizedBox(
+                width: size.width,
+                height: size.height,
+                child: const Center(
+                    child: CircularProgressIndicator()))
+                : Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFieldWidget(
-                      controller: TextEditingController(),
+                      controller:controller.searchController ,
                       keyboardType: TextInputType.text,
                       onChanged: (value){},
                       label: 'Find Course'

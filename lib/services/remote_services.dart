@@ -10,10 +10,8 @@ class RemoteServices {
     var response = await client.get(Uri.parse(AppConst.baseURL));
     var jsonString = response.body;
     if (response.statusCode == 200) {
-      print("successs");
      return courseFromJson(jsonString);
     }else {
-      print("fail");
       return courseFromJson(jsonString);
     }
   }

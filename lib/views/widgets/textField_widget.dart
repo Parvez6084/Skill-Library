@@ -27,13 +27,13 @@ class TextFieldWidget extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width,
           child: TextFormField(
-            style: const TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.black),
             controller: controller,
             keyboardType: keyboardType,
             onChanged: onChanged,
            decoration: InputDecoration(
              prefixIcon: const Icon(Icons.search),
-             suffixIcon: const Icon(Icons.swap_vert),
+             suffixIcon: const Icon(Icons.filter_list),
                 fillColor: Colors.white,
                 filled: true,
                 hintText: label,

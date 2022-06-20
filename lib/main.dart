@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Skill Library',
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.leftToRight,
       theme: ThemeData(fontFamily: AppFonts.poppins),
