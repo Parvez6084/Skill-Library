@@ -12,12 +12,14 @@ class DashBoardPage extends GetView<DashBoardPageController> {
         body: controller.currentPage,
         bottomNavigationBar: BottomNavigationBar(
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.apps), label: 'Cards'),
-            BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Scan'),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorite'),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Discussion'),
+            BottomNavigationBarItem(icon: Icon(Icons.chat_bubble), label: 'Chat'),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+            BottomNavigationBarItem(icon: Icon(Icons.more_horiz), label: 'More'),
           ],
           currentIndex: controller.currentIndex.value,
-          selectedItemColor: Colors.pinkAccent,
+          selectedItemColor: Colors.indigo,
           onTap: controller.changePage,
           selectedIconTheme: const IconThemeData(size: 28) ,
           unselectedItemColor: Colors.black54,

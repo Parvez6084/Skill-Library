@@ -1,10 +1,8 @@
 
 import 'package:get/get.dart';
 
-import '../favorite_page/favoritePageController.dart';
 import '../home_page/homePageController.dart';
-
-import '../scan_page/scanPageController.dart';
+import '../search_page/searchPageController.dart';
 import 'dashboardPageController.dart';
 
 class DashBoardPageBinding extends Bindings {
@@ -13,6 +11,6 @@ class DashBoardPageBinding extends Bindings {
     Get.lazyPut<DashBoardPageController>(() => DashBoardPageController());
     Get.lazyPut<HomePageController>(() => HomePageController());
     Get.lazyPut<ScanPageController>(() => ScanPageController());
-    Get.lazyPut<FavoritePageController>(() => FavoritePageController());
+
   }
 }

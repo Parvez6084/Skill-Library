@@ -3,9 +3,8 @@ import 'package:get/get.dart';
 
 import '../views/pages/dashboard_page/dashboardPage.dart';
 import '../views/pages/dashboard_page/dashboardPageBinding.dart';
-import '../views/pages/favorite_page/favoritePage.dart';
 import '../views/pages/home_page/homePage.dart';
-import '../views/pages/scan_page/scanPage.dart';
+import '../views/pages/search_page/searchPage.dart';
 import '../views/pages/welcome_page/welcomePage.dart';
 import '../views/pages/welcome_page/welcomePageBinding.dart';
 import 'app_routes.dart';
@@ -33,11 +32,6 @@ class AppPages {
     GetPage(
       name: Routes.scanPage,
       page: () => ScanPage(),
-      binding: DashBoardPageBinding(),
-    ),
-    GetPage(
-      name: Routes.favoritePage,
-      page: () => FavoritePage(),
       binding: DashBoardPageBinding(),
     ),
   ];
