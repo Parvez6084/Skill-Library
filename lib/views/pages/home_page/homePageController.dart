@@ -6,48 +6,18 @@ import 'package:skill_library/services/remote_services.dart';
 class HomePageController extends GetxController {
   var searchController = TextEditingController();
 
-  var tutor = <CategoiesData>[
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Finance'),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Design'),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Sales'),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Marketing '),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Marketing '),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Marketing '),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Marketing '),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Marketing '),
-  ].obs;
+  var tutor = <CategoiesData>[].obs;
+  var category = <CategoiesData>[].obs;
+  var courseModule = <PopularCoursesData>[].obs;
 
-  var category = <CategoiesData>[
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Finance'),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Design'),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Sales'),
-    CategoiesData(image: 'https://picsum.photos/200', name: 'Marketing '),
-  ].obs;
-
-  var courseModule = <PopularCoursesData>[
-    PopularCoursesData(
-      author: 'Parvez',
-      title: 'Android Development',
-      fees: Fees(currency: '200', currencySymbol: '\$', value: '300'),
-      rating: Rating(avgRating: '3', totalGivenBy: '132'),
-    ),
-    PopularCoursesData(
-      author: 'Hemail',
-      title: 'Ios Development',
-      fees: Fees(currency: '100', currencySymbol: '\$', value: '500'),
-      rating: Rating(avgRating: '3.5', totalGivenBy: '342'),
-    ),
-  ].obs;
-
-  var totalTutor = 56.obs;
-  var totalCategory = 172.obs;
-  var totalCourse = 12.obs;
-  var isLoad = false.obs;
+  var totalTutor = 0.obs;
+  var totalCategory = 0.obs;
+  var totalCourse = 0.obs;
+  var isLoad = true.obs;
 
   @override
   void onInit() {
-    // fetchCourseData();
-    print('Call>>Api');
+    fetchCourseData();
     super.onInit();
   }
 
@@ -55,7 +25,8 @@ class HomePageController extends GetxController {
     try {
       isLoad(true);
       var course = await RemoteServices.fetchCourses();
-      if (course != '') {
+      if (course != null) {
+
         tutor.addAll(course.tutors!.data!);
         totalTutor.value = course.tutors!.total!;
 
